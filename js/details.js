@@ -60,3 +60,140 @@ class Enlarg{
 new Enlarg()
 
 //渲染数据
+class Judg{
+  constructor(){
+    this.url='http://localhost/stage/data/item.json';
+    this.goods=JSON.parse(localStorage.getItem('goodsId'))
+    // console.log(this.goods[0].id)
+    this.init()
+   
+    // localStorage.setItem('goodsId',JSON.stringify(this.goods))
+    // this.goods=JSON.parse(localStorage.getItem('goods'));
+
+
+  };
+  init(){
+    let that=this;
+    $.ajax({
+      url:this.url,
+      success:function(res){
+        that.res=res;
+        that.display()
+      }
+    })
+  };
+  display(){
+    console.log(this.goods.length)
+   let str=''
+    for(let i=0;i<this.res.length;i++){
+      for(let j=0;j<this.res[i].length;j++){
+        for(let k=0;k<this.goods.length;k++){
+        if(this.goods[k].id==this.res[i][j].id){
+          $('.main-l').children('img').attr("src",this.res[i][j].img);
+          $('.main-c').children('img').attr("src",this.res[i][j].img);
+          $('.main-l').children('span').css({
+            display:'block'
+          })
+          $('.main-r').children('h3').html(this.res[i][j].name);
+          $('.main-r').children('p').eq(0).html(`商品号 ${this.res[i][j].id}`);
+          $('.main-r').children('span').html(this.res[i][j].price);
+          // $('main-r').children('button').attr(`shopId`,this.res[i][j].id)
+          str+=`<button shopid=${this.res[i][j].id}>加入购物车</button>`
+        //   str+=`<div class="main-l">
+        //   <img src="${this.res[i][j].img}" alt="" title="${this.res[i][j].name}">
+        //   <span></span>
+        //   <p></p>
+        // </div>
+        // <div class="main-c">
+        //   <img src="${this.res[i][j].img}" >
+        // </div>
+        // <div class="main-r">
+        //   <h3>${this.res[i][j].name}</h3>
+        //   <p>商品号 ${this.res[i][j].id}</p>
+        //   <span>${this.res[i][j].price}</span>
+        //   <p>促销 满立减 711半价抢8日</p>
+        //    <p>服务 本商品由邮乐网邮乐新乡馆提供
+        //       并进行相关配送和售后等服务。</p> 
+        //   <a href="javascript:;" shopId=${this.res[i][j].id}>加入购物车</a>
+        // </div>`
+      }
+        }
+      }
+    }
+    $('.button').html(str)
+   
+  }
+}
+new Judg()
+
+
+// http://localhost/stage/list.html
+
+$('.t-l').click(function(){
+  location.href="http://localhost/stage/index.html";
+})
+
+  
+
+
+class Goods{
+  constructor(){
+      let that=this;
+      $('.button').on('click','button',function(){
+  
+          // console.log($(this))
+          that.id=$(this).attr('shopid')
+          // console.log(that.id)
+          that.setDate()
+      })
+  };
+  setDate(){
+    this.goodsid=localStorage.getItem('shopId');
+    if(this.goodsid){
+          this.goodsid=JSON.parse(this.goodsid);
+          var flag=true;
+          for(var i=0;i<this.goodsid.length;i++){
+              if(this.id==this.goodsid[i].id){
+                  this.goodsid[i].num++
+                  flag=false;
+              }
+          }
+          if(flag){
+              this.goodsid.push({
+                  id:this.id,num:1
+              })
+          }
+          
+
+      }else{
+          this.goodsid=[{
+              id:this.id,num:1
+          }]
+      }
+      localStorage.setItem('shopId',JSON.stringify(this.goodsid))
+  }
+}
+// this.goods=localStorage.getItem('goods');
+//         if(this.goods){
+//             this.goods=JSON.parse(this.goods);
+//             var flag=true;
+//             for(var i=0;i<this.goods.length;i++){
+//                 if(this.id==this.goods[i].id){
+//                     this.goods[i].num++
+//                     flag=false;
+//                 }
+//             }
+//             if(flag){
+//                 this.goods.push({
+//                     id:this.id,num:1
+//                 })
+//             }
+            
+
+//         }else{
+//             this.goods=[{
+//                 id:this.id,num:1
+//             }]
+//         }
+//         localStorage.setItem('goods',JSON.stringify(this.goods))
+new Goods()

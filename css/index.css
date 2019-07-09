@@ -74,7 +74,7 @@
 #nav .ul .li .ban-nav .b-r{width: 275px;height: 455px;float: left;}
 #nav .ul .li .ban-nav .b-r a{display: block;float: left;}
 #nav .ul .li .ban-nav .b-r a img{display: block;float: left;}
-#nav .n-r{float: left;}
+#nav .n-r{float: left;margin-left: 200px}
 #nav .n-r li{float: left;font: 13px/40px "";color:#fff;text-align: center;width: 100px;cursor: pointer;}
 #nav .n-r li:hover{background: #6c0709}
 
@@ -103,6 +103,7 @@
 #main .tab{height: 338px;padding:20px 13px 0 13px;}
 #main .tab .tab-index{height: 52px;}
 /* #main .tab .tab-index ul{background: red} */
+#main .tab .tab-index ul {overflow: hidden;}
 #main .tab .tab-index ul li{width: 211px;height: 51px;float: left;text-align: center;cursor: pointer;}
 #main .tab .tab-index ul li span{font:15px/50px "";}
 #main .tab .tab-index ul li i{background: url(../images/tabb.png) no-repeat;display: inline-block;width: 25px;height: 25px;cursor: pointer;vertical-align: middle}
@@ -114,6 +115,7 @@
 #main .tab .tab-items ul li{width: 238px;height: 279px;border-right: 1px solid #f1f0ec;text-align: center;cursor: pointer;float: left;position: relative;}
 #main .tab .tab-items ul li:last-child{border-right: none;}
 #main .tab .tab-items ul li img{width: 200px;height: 200px;}
+#main .tab .tab-items ul li a{color:#666}
 #main .tab .tab-items ul li p{width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 14px;margin-top: 5px;}
 #main .tab .tab-items ul li span{margin-left: 4px;font-size: 18px;font-family:"microsoft yahei";margin-top: 10px;display: block;color: red;}
 
@@ -166,6 +168,7 @@
 
 #display .display ul li:last-child{margin-right: 0;}
 #display .display ul li:nth-child(4) {margin-right: 0;}
+#display .display ul li a{color:#666}
 #display .display ul li p{width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 14px;margin-top: 5px;}
 #display .display ul li span{margin-left: 4px;font-size: 18px;font-family:"microsoft yahei";margin-top: 10px;display: block;color: red;}
 
@@ -177,7 +180,8 @@
 #gofor .gofor ul li img{width:200px;height: 200px;margin-top: 10px;margin: 10px 15px 0 15px}
 #gofor .gofor ul li p{width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 14px;margin-top: 5px;text-align: center}
 #gofor .gofor ul li span{margin-left: 4px;font-size: 18px;font-family:"microsoft yahei";margin-top: 10px;display: block;color: #c52e13;;}
-#gofor .gofor ul li a{color:#666;float:left;display: inline-block;font-size:12px;margin-top: 10px;margin-left: 10px;}
+#gofor .gofor ul li a{color:#666;float:left;display: block;font-size:12px;margin-top: 10px;margin-left: 10px;}
+#gofor .gofor ul li a:first-child{width: 200px}
 #gofor .gofor ul li a:last-child{float: right;margin-right: 15px}
 #gofor h2{ font-size: 16px;color: #bbb;letter-spacing: 6px;height: 30px;line-height: 50px;background-image: url(../images/end.png);background-repeat: no-repeat;margin-left: 460px;}
 

@@ -65,7 +65,30 @@ class Tab{
     addEvent(){
         let that=this;
         $('.tab-index').find('li').mouseenter(function(){
+            // if(that.index>$(this).index()){
+            //     console.log(1)
+            //    $('.tab-items').find('ul').css({top:-279,position:'relative;'}).stop().animate({
+            //        top:0
+            //   },1000)
+            // // .end().eq(that.index).css({top:0}).stop().animate({
+            // //     top:279
+            // // },1000)
+
+            // //    $(".shop").on("click",".small li",function(){
+            //     //     $(this).addClass("active").siblings().removeClass("active");
+            //     //     $(".big").eq($(this).index()).css({top:-440,display:"block"}).stop().animate({
+                
+            //     //       // display:"block",
+            //     //       top:0
+                     
+            //     //     },1000).siblings().css({display:"none",top:-440})
+            //     //     // console.log(1)
+            //     //   })
+            // }else if(that.index<$(this).index()){
+            //     console.log(2)
+            // }
             that.index=$(this).index();
+            
             $(this).css({
                 background:"#fdf3f2",
                 borderBottom:"1px solid red"
@@ -104,10 +127,12 @@ class Tab{
         let str="";
         for(let i=this.index*this.maxNum;i<this.maxNum*this.index+this.maxNum;i++){
             str+=`
-                    <li goodsId=${this.res[0][i].id}>
+                    <li goodsid=${this.res[0][i].id}>
+                    <a href="details.html">
                         <img src="${this.res[0][i].img}" title="${this.res[0][i].name}">
                         <p>${this.res[0][i].name}</p>
                         <span>${this.res[0][i].price}</span>
+                    </a>
                     </li>
                 `
         }
@@ -137,10 +162,11 @@ class Load{
             // this.list = $("<dd class='list'></dd>")
             let str="";
             for(let j=0;j<this.res[i].length;j++){
-                str+=`<li goodsId=${this.res[i][j].id}>
-                    <a href=""> <img src="${this.res[i][j].img}" title="${this.res[i][j].name}"></a>
+                str+=`<li goodsid=${this.res[i][j].id}>
+                    <a href="details.html"> <img src="${this.res[i][j].img}" title="${this.res[i][j].name}">
                     <p>${this.res[i][j].name}</p>
                     <span>${this.res[i][j].price}</span>
+                    </a>
                     </li>  `
             }
             $(`.display${i}`).find('ul').html(str)
@@ -169,20 +195,86 @@ class Gofor{
         let str="";
         // console.log(this.res.length)
         for(let i=0;i<this.res[6].length;i++){
-            str+=`<li goodsId=${this.res[6][i].id}>
+            str+=`<li goodsid=${this.res[6][i].id}>
+                    <a href="details.html">
                         <img src="${this.res[6][i].img}" alt="">
                         <p>${this.res[6][i].name}</p>
                         <span>${this.res[6][i].price}</span>
                         <a href="javascript:;">${this.res[6][i].store}</a>
                         <a href="javascript:;">${this.res[6][i].city}</a>
+                        </a>
                     </li>`
         }
         $(".gofor").find('ul').html(str)
     }
 }
 new Gofor()
+//获取id，存储数据库，并跳转至详情页
+class ItemGoods{
+    constructor(){
+        let that=this;
+        $('.tab-items').on('click','li',function(event){
+            // console.log($(this))
+            that.id=$(this).attr('goodsid')
+            // console.log(that.id)
+            that.setDate()
+        })
+    };
+    setDate(){
+        this.goods=[{
+            id:this.id
+        }]
+        localStorage.setItem('goodsId',JSON.stringify(this.goods))
+    }
+}
+new ItemGoods()
 
+class DisGoods{
+    constructor(){
+        let that=this;
+        $('.display').on('click','li',function(event){
+            // console.log($(this))
+            that.id=$(this).attr('goodsid')
+            // console.log(that.id)
+            that.setDate()
+        })
+    };
+    setDate(){
+        this.goods=[{
+            id:this.id
+        }]
+        localStorage.setItem('goodsId',JSON.stringify(this.goods))
+    }
+}
+new DisGoods()
+
+class GoGoods{
+    constructor(){
+        let that=this;
+        $('.gofor').on('click','li',function(event){
+            // console.log($(this))
+            that.id=$(this).attr('goodsid')
+            // console.log(that.id)
+            that.setDate()
+        })
+    };
+    setDate(){
+        this.goods=[{
+            id:this.id
+        }]
+        localStorage.setItem('goodsId',JSON.stringify(this.goods))
+    }
+}
+new GoGoods()
+
+$('.n-l-t').click(function(){
+    location.href="http://localhost/stage/list.html";
+})
 
      
 
+    
+ 
+
+  
 

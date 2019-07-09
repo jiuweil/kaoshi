@@ -92,7 +92,7 @@
 #nav .ul .li .ban-nav .b-r{width: 275px;height: 455px;float: left;}
 #nav .ul .li .ban-nav .b-r a{display: block;float: left;}
 #nav .ul .li .ban-nav .b-r a img{display: block;float: left;}
-#nav .n-r{float: left;}
+#nav .n-r{float: left;margin-left: 200px}
 #nav .n-r li{float: left;font: 13px/40px "";color:#fff;text-align: center;width: 100px;cursor: pointer;}
 #nav .n-r li:hover{background: #6c0709}
 
@@ -101,33 +101,8 @@
 #main .box ul{overflow: hidden;width: 110%;}
 #main .box ul li{width: 230px;height: 310px;border: 1px solid #e6e6e6;background: white;margin: 0 10px 10px 0;display: block;float: left;cursor: pointer;}
 #main .box ul li img{width:200px;height: 200px;margin-top: 10px;margin: 10px 15px 0 15px}
-#main .box ul li a{display: block;width: 200px}
+#main .box ul li a:first-child{display: block;width: 200px}
 #main .box ul li p{width: 200px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 14px;margin-top: 5px;text-align: center}
-
-/* #gofor .gofor{margin: 0 auto;width: 1200px;}
-#gofor .gofor ul{overflow: hidden;width: 110%;}
-#gofor .gofor ul li{width: 230px;height: 310px;background: white;margin: 0 10px 10px 0;display: block;float: left;}
-#gofor .gofor ul li img{width:200px;height: 200px;margin-top: 10px;margin: 10px 15px 0 15px}
-#gofor .gofor ul li p{width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 14px;margin-top: 5px;text-align: center}
-#gofor .gofor ul li span{margin-left: 4px;font-size: 18px;font-family:"microsoft yahei";margin-top: 10px;display: block;color: #c52e13;;}
-#gofor .gofor ul li a{color:#666;float:left;display: inline-block;font-size:12px;margin-top: 10px;margin-left: 10px;}
-#gofor .gofor ul li a:last-child{float: right;margin-right: 15px} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #main .box ul li span{margin-left: 4px;font-size: 18px;font-family:"microsoft yahei";margin-top: 10px;display: block;color: #c52e13;}
 #main .box ul li a{color:#666;display: inline-block;font-size:12px;margin-top: 10px;margin-left: 10px;float: left;}

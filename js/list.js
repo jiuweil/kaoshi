@@ -92,7 +92,7 @@ class Page{
          for(let i=this.index*this.num;i<this.num*this.index+this.num;i++){
           if(i<this.res[6].length){
                 str+=`<li goodsid=${this.res[6][i].id}>
-                            <a href="javascript:;">
+                            <a href="details.html">
                             <img src="${this.res[6][i].img}" alt="">
                             <p>${this.res[6][i].name}</p>
                             <span>${this.res[6][i].price}</span>
@@ -137,7 +137,7 @@ new Page({
 
 });
 
-
+//把点击的li的id拿到，存储在本地存储里面
 class Goods{
     constructor(){
         let that=this;
@@ -145,8 +145,18 @@ class Goods{
             // console.log($(this))
             that.id=$(this).attr('goodsid')
             // console.log(that.id)
-            
+            that.setDate()
         })
+    };
+    setDate(){
+        this.goods=[{
+            id:this.id
+        }]
+        localStorage.setItem('goodsId',JSON.stringify(this.goods))
     }
 }
 new Goods()
+
+$('.t-l').click(function(){
+    location.href="http://localhost/stage/index.html";
+  })

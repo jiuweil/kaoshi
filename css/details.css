@@ -56,7 +56,7 @@
 #main .box .main-r h3{width: 570px}
 #main .box .main-r p{font: 12px/60px "";color:#999;}
 #main .box .main-r span{color:#c52e15;font-size: 24px;font-weight: 700}
-#main .box .main-r a{display: block; background:#f6730b;color:white;font:14px/40px "";font-weight: 700;width: 150px;border: 1px solid #c52e15;border-radius: 5px;text-align: center;margin-top: 20px}
+#main .box .main-r .button button{display: block; background:#f6730b;color:white;font:14px/40px "";font-weight: 700;width: 150px;border: 1px solid #c52e15;border-radius: 5px;text-align: center;margin-top: 20px;height: 42px;}
 
 
 
