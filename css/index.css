@@ -78,6 +78,11 @@
 #nav .n-r li{float: left;font: 13px/40px "";color:#fff;text-align: center;width: 100px;cursor: pointer;}
 #nav .n-r li:hover{background: #6c0709}
 
+#float {display:none;background: rgba(255,255,255,.8);border-bottom: 1px solid #d5d5d5;z-index:5;height: 50px;width: 1224px;position: fixed;top:0;}
+#float .h-l{float: left;width: 303px;margin-left: 20px;}
+#float .form{margin-top: 22px;float: left;margin: 0 auto}
+#float .txt{float:left;width: 457px;height: 30px;border: 3px solid #c7181d;border-right: none;margin: 0;padding: 0}
+#float .sub{float: left; height: 36px;width: 73px;background: #c7181d;border: none;}
 
 
 #banner{height:467px;width: 1224px;margin: 0 auto;position: relative;overflow: hidden;cursor: pointer;}
@@ -119,14 +124,65 @@
 #main .main-nav ul img{width:390px;height: 130px;}
 
 #main .slide-item{padding-left: 13px;height: 415px;}
-#main .slide-item ul{height: 100%;}
-#main .slide-item ul li{height: 100%; width:370px;float: left;margin-left: 13px;background: white;padding: 0 10px}
-#main .slide-item ul li .title{height: 55px;line-height: 55px}
-#main .slide-item ul li .title h3{color:#333;float: left;font-size: 20px;font-weight: normal}
-#main .slide-item ul li .title span{float: right;}
-#main .slide-item ul li .content{overflow: hidden;position: relative;width: 370px;height: 355px;}
-#main .slide-item ul li .content img{position: absolute;left:370px;width: 370px;}
-#main .slide-item ul li .content img:nth-child(1) {left: 0;}
-#main .slide-item ul li .content .list .span{text-align: center; display: inline-block; width: 20px;height: 20px;background: white;border-radius: 50%;position: relative;z-index: 3;font-style: normal;cursor: pointer;top: 430px;left: 800px;;margin: 0 10px}
-/* #banner .ul1 li{position: absolute;top: 0;left:370px;}
-#banner .ul1 li:nth-child(1){left:0} */
+#main .slide-item ul{height: 100%}
+#main .slide-item ul .li1{height: 100%; width:370px;float: left;margin-right: 13px;background: white;padding: 0 10px}
+#main .slide-item ul .li1:last-child{margin: 0}
+#main .slide-item ul .li1 .title{height: 55px;line-height: 55px}
+#main .slide-item ul .li1 .title h3{color:#333;float: left;font-size: 20px;font-weight: normal}
+#main .slide-item ul .li1 .title span{float: right;}
+#main .slide-item ul .li1 .content{overflow: hidden;position: relative;width: 370px;height: 355px;}
+#main .slide-item ul .li1 .content img{position: absolute;left:370px;width: 370px;}
+#main .slide-item ul .li1 .content img:nth-child(1) {left: 0;}
+#main .slide-item ul .li1 .content .list .span{text-align: center; display: inline-block; width: 20px;height: 20px;background: white;border-radius: 50%;position: relative;z-index: 3;font-style: normal;cursor: pointer;top: 430px;left: 800px;;margin: 0 10px}
+
+#main .slide-item ul .li1 .title-content{overflow: hidden; position: relative;width: 370px;height: 355px;}
+#main .slide-item ul .li1 .title-content li{position: absolute;left:390px;width: 390px;}
+#main .slide-item ul .li1 .title-content li:nth-child(1){left: 0;}
+#main .slide-item ul .li1 .title-content li .list .span{text-align: center; display: inline-block; width: 20px;height: 20px;background: white;border-radius: 50%;position: relative;z-index: 3;font-style: normal;cursor: pointer;}
+
+#main .slide-item ul .li1 .title-content1{overflow: hidden; position: relative;width: 370px;height: 355px;}
+#main .slide-item ul .li1 .title-content1 li{position: absolute;left:390px;width: 390px;}
+#main .slide-item ul .li1 .title-content1 li:nth-child(1){left: 0;}
+#main .slide-item ul .li1 .title-content1 li .list .span{text-align: center; display: inline-block; width: 20px;height: 20px;background: white;border-radius: 50%;position: relative;z-index: 3;font-style: normal;cursor: pointer;}
+
+#main .reward{height: 130px;margin:30px 0 0 0px;cursor: pointer;}
+#main .reward img{margin: 0 auto;display: block;width: 1200px;}
+
+#display{width:1224px;background: #f3f4f6;margin:0 auto;overflow: hidden;}
+
+#display .top{height: 40px;padding-bottom: 1px;margin-right: 2px;padding-left: 13px;margin-right: 13px;}
+#display .top h1{display:block;color: tomato;margin: 0 10px 0 15px;font-size: 22px;font-weight: bolder;float: left;}
+#display .top p a{color: #666;cursor: pointer;line-height: 16px;margin-left: 10px;}
+#display .top p{display:block;float: left;margin-top: 12px;line-height: 16px;color: #666;font-size: 12px}
+#display .top i{display: inline-block;width: 5px;margin-top: 3px;height: 25px;float:left;background: #ff7b30;font-style: normal;}
+#display .top .link{float: right;margin-top: 12px;line-height: 16px;font-size: 14px;color: #333;}
+
+#display .display{border-top: 2px solid #ff7b30;width:1200px;margin-left: 12px;overflow: hidden;cursor: pointer;}
+
+/* #display .display .display2{overflow: hidden} */
+
+#display .display .dl{height: 550px;width:270px;float: left;margin-right: 10px;}
+#display .display ul li{height: 270px;width:222px;float: left;margin-bottom: 10px;margin-right: 10px;text-align: center;background: white}
+
+#display .display ul li:last-child{margin-right: 0;}
+#display .display ul li:nth-child(4) {margin-right: 0;}
+#display .display ul li p{width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 14px;margin-top: 5px;}
+#display .display ul li span{margin-left: 4px;font-size: 18px;font-family:"microsoft yahei";margin-top: 10px;display: block;color: red;}
+
+#gofor{width:1224px;background: #f3f4f6;margin:0 auto;overflow: hidden;}
+#gofor h3{font:20px/60px "";text-align: center}
+#gofor .gofor{margin: 0 auto;width: 1200px;}
+#gofor .gofor ul{overflow: hidden;width: 110%;}
+#gofor .gofor ul li{width: 230px;height: 310px;background: white;margin: 0 10px 10px 0;display: block;float: left;}
+#gofor .gofor ul li img{width:200px;height: 200px;margin-top: 10px;margin: 10px 15px 0 15px}
+#gofor .gofor ul li p{width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 14px;margin-top: 5px;text-align: center}
+#gofor .gofor ul li span{margin-left: 4px;font-size: 18px;font-family:"microsoft yahei";margin-top: 10px;display: block;color: #c52e13;;}
+#gofor .gofor ul li a{color:#666;float:left;display: inline-block;font-size:12px;margin-top: 10px;margin-left: 10px;}
+#gofor .gofor ul li a:last-child{float: right;margin-right: 15px}
+#gofor h2{ font-size: 16px;color: #bbb;letter-spacing: 6px;height: 30px;line-height: 50px;background-image: url(../images/end.png);background-repeat: no-repeat;margin-left: 460px;}
+
+#footer{width:1224px; height:138px;text-align:center;background:#000;font:12px/30px "";margin:0 auto;}
+#footer .f-t{font:12px;padding-top:21px;}
+#footer .f-t a{color:#7a7a7a;}
+#footer .f-t span{color:#7a7a7a;margin:0 10px;}
+#footer p{color:#7a7a7a;}
