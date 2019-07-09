@@ -1,66 +1,25 @@
-// class List{
-//   constructor(){
-//     this.url="http://localhost/stage/data/item.json";
-//     this.maxNum=50;
-//     this.index=0;
-//     this.init();
-//     // this.addEvent()
-//   };
-//   init(){
-//     let that=this;
-//           $.ajax({
-//               url:this.url,
-//               success:function(res){
-//                   that.res=res;
-//                   that.load()
-//                   that.display();
-                  
-//               }
-//           })
-//       };
-//       load(){
-//           //    console.log(this.res)
-//           let str="";
-//           this.num=Math.ceil(this.res[6].length/this.maxNum)
-//              for(var i=0;i<this.num;i++){
-//               str+=`<li>${i+1}</li>`
-//              }
-//             $('.pagelist').find('ul').html(str);
-//             //  this.active()
-       
-//       }
-//   display(){
-    
-//     // for(let i=0;i<this.res.length;i++){
+$('.n-l-t').mouseenter(function(){
+  $('.ul').stop().show()
+})
+$('.li').mouseenter(function(){
+  $(this).css({
+      background:"white"
+  }).children('.ban-nav').stop().show().parent().siblings().css({
+      background: ""
+  }).children('.ban-nav').stop().hide()
+})
+$('.li').mouseleave(function(){
 
-      
-//     //   for(let j=0;j<this.res[i].length;j++){
-
-//     //   }
-//     // }
-//     let str="";
-//         // console.log(this.res.length)
-//      for(let i=this.index*this.maxNum;i<this.maxNum*this.index+this.maxNum;i++){
-//       if(i<this.res[6].length){
-//             str+=`<li goodsId=${this.res[6][i].id}>
-//                         <img src="${this.res[6][i].img}" alt="">
-//                         <p>${this.res[6][i].name}</p>
-//                         <span>${this.res[6][i].price}</span>
-//                         <a href="javascript:;">${this.res[6][i].store}</a>
-//                         <a href="javascript:;">${this.res[6][i].city}</a>
-//                     </li>`
-//       }
-       
-//     }
-        
-//         // $(".gofor").find('ul').html(str)
-//     $('.box').find('ul').html(str)
-
+  $(this).css({
+      background:""
+  }).children('.ban-nav').stop().hide()
+});
+$('.n-l').mouseleave(function(){
+  $('.ul').stop().hide()
   
-//   }
-// }
-// new List()
+})
 
+//分页
 class Page{
   constructor(options){
       this.url=options.url;
@@ -129,14 +88,17 @@ class Page{
   display(){
     let str="";
             // console.log(this.res.length)
+            
          for(let i=this.index*this.num;i<this.num*this.index+this.num;i++){
           if(i<this.res[6].length){
-                str+=`<li goodsId=${this.res[6][i].id}>
+                str+=`<li goodsid=${this.res[6][i].id}>
+                            <a href="javascript:;">
                             <img src="${this.res[6][i].img}" alt="">
                             <p>${this.res[6][i].name}</p>
                             <span>${this.res[6][i].price}</span>
                             <a href="javascript:;">${this.res[6][i].store}</a>
                             <a href="javascript:;">${this.res[6][i].city}</a>
+                            </a>
                         </li>`
           }
            
@@ -174,3 +136,17 @@ new Page({
   url:'http://localhost/stage/data/item.json'
 
 });
+
+
+class Goods{
+    constructor(){
+        let that=this;
+        $('.box').on('click','li',function(event){
+            // console.log($(this))
+            that.id=$(this).attr('goodsid')
+            // console.log(that.id)
+            
+        })
+    }
+}
+new Goods()

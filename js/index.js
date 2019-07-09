@@ -149,6 +149,7 @@ class Load{
     }
 }
 new Load()
+//渲染最后的逛一逛
 class Gofor{
     constructor(){
         this.url="http://localhost/stage/data/item.json";
