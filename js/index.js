@@ -270,11 +270,93 @@ new GoGoods()
 $('.n-l-t').click(function(){
     location.href="http://localhost/stage/list.html";
 })
-
+class Type{
+    constructor(){
+     this.goods=localStorage.getItem('loginId');
+     if(this.goods){
+       this.goods=JSON.parse(this.goods)
+       for(let i=0;i<this.goods.length;i++){
+         if(this.goods[i].type==1){
+             console.log(1)
+           $('.login').html('已登录')
+           $('.register').html('退出')
+         }
+       }
+     }
+    }
+   }
+   new Type()
+   
+class Toggle{
+    constructor(){
+      $('.shoptoggle').click(function(){
+        this.goods=localStorage.getItem('loginId');
+        let flag=true;
+        if(this.goods){
+          this.goods=JSON.parse(this.goods)
+          for(let i=0;i<this.goods.length;i++){
+            if(this.goods[i].type==1){
+              flag=false;
+              location.href="http://localhost/stage/car.html"
+            }
+          }
+          if(flag){
+            alert("请先登录")
+          }
+        }else{
+          alert("请先登录")
+        }
+      })
+    }
+  }
+  new Toggle()
      
 
-    
+  class Sign{
+    constructor(){
+      $('.register').click(function(){
+        
+        this.goods= localStorage.getItem('loginId');
+        if(this.goods){
+       
+          this.goods=JSON.parse(this.goods)
+          
+          for(let i=0;i<this.goods.length;i++){
+           this.goods[i].type=0
+            }
+            localStorage.setItem('loginId',JSON.stringify(this.goods))
+          }
+        
+      })
+    }
+  }
+  new Sign()
  
+  class ShopNum{
+    constructor(){
+     this.goods=localStorage.getItem('loginId');
+     if(this.goods){
+       this.goods=JSON.parse(this.goods)
+       for(let i=0;i<this.goods.length;i++){
+         if(this.goods[i].type==1){
+           this.goodsNum=localStorage.getItem('shopId');
+             if(this.goodsNum){
+               this.goodsNum=JSON.parse(this.goodsNum)
+              
+                 $('.number').html(this.goodsNum.length)
+             }else{
+               $('.number').html(0)
+             }
+  
+  
+  
+  
+         }
+       }
+     }
+    }
+  }
+  new ShopNum()
 
   
 

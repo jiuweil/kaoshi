@@ -42,31 +42,16 @@
 
 
 
-#main{width: 1224px;min-height: 550px;border: 1px solid #ededed ;background: #f7f7f7;margin: 0 auto 50px;cursor: pointer;position: relative;}
-#main .main{margin: 0 auto; width: 1100px;min-height: 500px;margin-top: 30px;border: 1px solid #000;margin-bottom: 50px}
-/* 
-#main .top .form{margin: 0 auto}
-#main .top tr{text-align: center;margin-top:100px} */
-#main  ul{width: 1000px;margin: 0 auto;}
-#main .top{overflow: hidden;}
-#main .top ul li{float: left;margin-right: 100px}
-#main .top ul li:nth-child(3){margin-right:165px }
-#main .top ul li:last-child{margin-right:0px }
-#main .load {margin-top: 20px;overflow: hidden;height: 80px;}
-#main .load ul li{width:50px;float: left;margin-right: 80px}
-#main .load ul li:nth-child(1){float: left;margin-right: 50px;width:70px}
-#main .load ul li:nth-child(2){float: left;margin-right: 50px;width:50px}
-#main .load ul li:nth-child(3){float: left;margin-right: 50px;width:200px}
-#main .load ul li:nth-child(5){margin-right: 60px;width: 80px}
-/* #main .load ul li:nth-child(3){float: left;margin-right: 50px;width:200px} */
-#main .load ul li img{width: 70px;height: 70px;}
-#main .load ul li p{width: 200px;font-size: 12px;color: #333;}
-#main .load ul li .cont1{width: 50px;float: left;}
-#main .load ul li button{float: left;}
-#main .total{position: absolute; bottom: 60px;right: 200px;}
-#main .total .total1{width: 200px}
-#main .settlement{position: absolute; bottom: 20px;right: 200px;}
+#main{width: 1224px;min-height: 520px;margin: 0 auto;margin-top: 50px;cursor: pointer;border-top: 2px solid #a71b1c;position: relative;}
+#main .main{margin: 0 auto;height: 500px;padding-bottom: 20px;width: 1200px;background: url(../images/login.jpg) no-repeat;border-bottom: 1px solid #ddd;}
 
+#main .login{width: 332px;height: 285px;position: absolute;top: 100px;right:124px;;border: 1px solid #f71353;border-radius: 5px;background: white}
+#main .login h3{text-align: center;color:000;font-weight: 700;}
+#main .login .username{font-size: 14px/24px "";color: #333;margin-left: 50px;margin-top: 30px}
+#main .login .password{font-size: 14px/24px "";color: #333;margin-left: 50px;margin-top: 30px}
+#main .login button{display: block; background:#f6730b;color:white;font:14px/40px "";font-weight: 700;width: 150px;border: 1px solid #c52e15;border-radius: 5px;text-align: center;margin-top: 20px;height: 42px;float: left;}
+#main .login .reg{margin-left: 10px}
+#main .login .log{margin-left: 10px}
 
 
 

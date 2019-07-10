@@ -32,7 +32,7 @@
 
 #header .h-r em{font-style: normal;color: #c5c4c4;display: inline-block;margin: 0 11px}
 
-#header .h-r span{font: 12px/34px "";}
+#header .h-r span{font: 12px/34px "";cursor: pointer;}
 
 #header .h-r i{background: url(../images/car.png);text-align: center;display: inline-block;}
 #header .h-r i.i1{width: 16px;height: 15px;background-position: 0 0;margin-left: 11px;margin-right: 5px;}
