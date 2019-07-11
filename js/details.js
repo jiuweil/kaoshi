@@ -140,7 +140,7 @@ class Goods{
   constructor(){
       let that=this;
       $('.button').on('click','button',function(){
-  
+        $('.number').html( $('.number').html()+1)
           // console.log($(this))
           that.id=$(this).attr('shopid')
           // console.log(that.id)

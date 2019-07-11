@@ -277,7 +277,7 @@ class Type{
        this.goods=JSON.parse(this.goods)
        for(let i=0;i<this.goods.length;i++){
          if(this.goods[i].type==1){
-             console.log(1)
+            //  console.log(1)
            $('.login').html('已登录')
            $('.register').html('退出')
          }
@@ -358,5 +358,21 @@ class Toggle{
   }
   new ShopNum()
 
+  $("#floor").find('li').click(function(){
+    //   console.log(1)
+    // console.log( $('.top').eq($(this).index()))
+    // $('.display').eq($(this).index()).animate({
+    //     scrollTop:0
+    // },1000)
+    // console.log(1)
+    // console.log($('.display').eq($(this).index()).offset().top)
+    // $('body').stop().animate({
+    //      screenTop:$('.display').eq($(this).index()).offset().top
+    // }
+       $('html').animate({
+           scrollTop:$('.top').eq($(this).index()).offset().top-70
+       })
+    // )
+  })
   
 

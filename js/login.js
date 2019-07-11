@@ -19,6 +19,7 @@ class Reg{
       that.setDate()
     })
   };
+  //注册
   setDate(){
     this.goodss=localStorage.getItem('loginId');
     if(this.goodss){

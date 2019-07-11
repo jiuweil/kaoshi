@@ -66,28 +66,10 @@
 #main .total{position: absolute; bottom: 60px;right: 200px;}
 #main .total .total1{width: 200px}
 #main .settlement{position: absolute; bottom: 20px;right: 200px;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #footer{ width:1224px; height:138px;text-align:center;background:#000;font:12px/30px "";margin:0 auto ;margin-top: 50px;}
 #footer .f-t{font:12px;padding-top:21px;}
 #footer .f-t a{color:#7a7a7a;}
 #footer .f-t span{color:#7a7a7a;margin:0 10px;}
 #footer p{color:#7a7a7a;}
+
+

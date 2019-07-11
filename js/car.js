@@ -132,8 +132,9 @@ class Judg{
   })
 
       $(this).blur(function(){
-        if(parseFloat($(this).val()==0)){
-          $(this).val()=1
+        if($(this).val()==0 ||$(this).val()==''){
+          // console.log(1)
+          $(this).val(1)
         }
         that.id=$(this).parent().parent().parent().attr('index')
         that.num=parseInt($(this).val()) ;

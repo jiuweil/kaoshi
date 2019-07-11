@@ -190,3 +190,6 @@
 #footer .f-t a{color:#7a7a7a;}
 #footer .f-t span{color:#7a7a7a;margin:0 10px;}
 #footer p{color:#7a7a7a;}
+#floor{position: fixed;top:200px;cursor: pointer;left: 20px;z-index:10}
+#floor ul{}
+#floor ul li{margin-top: 20px;width: 40px;background: orange;color: white;font-weight: 700;text-align: center}
