@@ -139,8 +139,34 @@ $('.t-l').click(function(){
 class Goods{
   constructor(){
       let that=this;
+      // $('.button').one('click',function(){
+      //   // $('.number').html( $('.number').html()+1)
+      //     // console.log($(this))
+      //     // that.id=$(this).attr('shopid')
+      //     // // console.log(that.id)
+      //     // that.setDate()
+          
+      // })
+      this.goods=localStorage.getItem('loginId');
+      if(this.goods){
+        this.goods=JSON.parse(this.goods)
+        for(let i=0;i<this.goods.length;i++){
+          if(this.goods[i].type==1){
+            $('.button').on('click','button',function(){
+              // $('.number').html( $('.number').html()+1)
+                // console.log($(this))
+                that.id=$(this).attr('shopid')
+                // console.log(that.id)
+                that.setDate()
+            }).one('click',function(){
+              $('.number').html(Number($('.number').html())+1)
+            })
+          }
+        }
+      }
+
       $('.button').on('click','button',function(){
-        $('.number').html( $('.number').html()+1)
+        // $('.number').html( $('.number').html()+1)
           // console.log($(this))
           that.id=$(this).attr('shopid')
           // console.log(that.id)
